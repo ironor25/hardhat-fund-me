@@ -1,7 +1,11 @@
-const { assert } = require("chai")
-const { network, ethers, getNamedAccounts } = require("hardhat")
+//this file is for to test thath the test is correctly running on testnet or not.
+const{getNamedAccounts, ethers, network}=require("hardhat")
 const { developmentChains } = require("../../helper-hardhat-config")
+const { assert } = require("chai")
+//let var =False
+//let somev= var ? "yes" : "no"
 
+//if (somev) {somev= "yes"} else{ somev ="no"} above and this statement is same.
 developmentChains.includes(network.name)
     ? describe.skip
     : describe("FundMe Staging Tests", function () {
